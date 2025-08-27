@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2gBTOYj5XJ0W28I7C6Jz5x5S1n6d4R99gL6z/sQ/19tO8z2oO/52F5V9xQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 font-sans">
+    
+    <header class="bg-white shadow flex justify-between items-center px-6 py-3">
+        <div class="flex items-center gap-2">
+            <img src="images/logo.png" alt="Logo" class="w-10 h-10">
+            <h1 class="text-lg font-bold text-black-800">Emergency <span class="text-black">Service</span></h1>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded-lg text-sm">
+                <span id="heartCountDisply">0</span>
+                <img src="images/heart.png" alt="heart" class="w-4 h-4">
+            </div>
+            <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded-lg text-sm">
+                <span id="coinDisplay">100</span>
+                <img src="images/coin.png" alt="coin" class="w-4 h-4">
+            </div>
+            <button class="bg-green-600 text-white px-4 py-1 rounded-lg shadow hover:bg-green-700 text-sm">
+                <span id="copyCount">0</span> Copy
+            </button>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-green-900 to-green-800 text-white py-6 text-center relative">
+        <div class="flex justify-center mb-2">
+            <img src="images/logo-dark.png" alt="Gov Logo" class="w-16 h-16">
+        </div>
+        <h2 class="text-2xl font-bold">Emergency Service Directory</h2>
+        <p class="text-sm mt-1">
+            Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of Bangladesh
+        </p>
+    </section>
+
+    <main class="flex flex-col md:flex-row max-w-7xl mx-auto p-6 md:space-x-6">
+        <div id="card-container" class="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/emergency.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">National Emergency Number</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">National Emergency</p>
+                <p class="text-2xl font-bold">999</p>
+                <p class="text-xs text-gray-400 mb-3">All</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/police.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Police Helpline Number</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Police</p>
+                <p class="text-2xl font-bold">999</p>
+                <p class="text-xs text-gray-400 mb-3">Police</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/fire-service.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Fire Service Number</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Fire Service</p>
+                <p class="text-2xl font-bold">999</p>
+                <p class="text-xs text-gray-400 mb-3">Fire</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/ambulance.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Ambulance Service</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Ambulance</p>
+                <p class="text-2xl font-bold">1994-999999</p>
+                <p class="text-xs text-gray-400 mb-3">Health</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/emergency.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Women & Child Helpline</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Women & Child Helpline</p>
+                <p class="text-2xl font-bold">109</p>
+                <p class="text-xs text-gray-400 mb-3">Help</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/emergency.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Anti-Corruption Helpline</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Anti-Corruption</p>
+                <p class="text-2xl font-bold">106</p>
+                <p class="text-xs text-gray-400 mb-3">Govt.</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/emergency.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Electricity Helpline</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Electricity Outage</p>
+                <p class="text-2xl font-bold">16216</p>
+                <p class="text-xs text-gray-400 mb-3">Electricity</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/brac.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Brac Helpline</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Brac</p>
+                <p class="text-2xl font-bold">16445</p>
+                <p class="text-xs text-gray-400 mb-3">NGO</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-md border relative">
+                <img src="images/icons8-heart-30.png" alt="heart" class="absolute top-4 right-4 w-6 h-6 cursor-pointer heart-icon">
+                <div class="flex flex-col items-start gap-1 mb-2">
+                    <img src="images/Bangladesh-Railway.png" alt="icon" class="w-6 h-6">
+                    <h3 class="font-semibold">Bangladesh Railway Helpline</h3>
+                </div>
+                <p class="text-gray-500 text-sm mb-2">Bangladesh Railway</p>
+                <p class="text-2xl font-bold">163</p>
+                <p class="text-xs text-gray-400 mb-3">Travel</p>
+                <div class="flex gap-2">
+                    <button class="border px-3 py-1 rounded-lg text-sm flex items-center gap-1 copy-btn">
+                        <img src="images/icons8-copy-48.png" alt="Copy Icon" class="w-4 h-4"> Copy
+                    </button>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-1 callBtn">
+                        <img src="images/icons8-phone-32.png" alt="Call Icon" class="w-4 h-4"> Call
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+         <!--Main right side history-->
+      <div class="col-span-4 md:col-span-3 bg-white rounded-xl">
+        <!-- History Header-->
+        <div class="flex justify-between p-2">
+          <div class="text-[10px] md:text-xl">
+            <i class="fa-regular fa-clock"></i> Call History
+          </div>
+          <button
+            id="clearBtn"
+            class="hover:bg-gray-400 duration-300 cursor-pointer bg-green-600 px-1 md:px-3 text-[10px] md:text-xl rounded-full text-white"
+          >
+            Clear
+          </button>
+        </div>
+        <!--dynamic history container-->
+        <div id="sidberCartContainer" class="px-2">
+          <!--Dynamic Card add -->
+        </div>
+      </div>
+    </main>
+    <script src="home.js"></script>
+</body>
+</html>
